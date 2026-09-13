@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090d13">
+  <meta name="description" content="Test authorized HLS and MP4 video sources across short-drama providers.">
+  <title>Provider Playback Lab</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090d13'/%3E%3Cpath d='M25 18v28l23-14z' fill='%2349d7ff'/%3E%3Ccircle cx='18' cy='18' r='5' fill='%238fea6a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Provider Playback Lab home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span>
+        <strong>Playback Lab</strong>
+        <small>Provider stream tester</small>
+      </span>
+    </a>
+    <div class="summary" aria-label="Test summary">
+      <span><b id="workingCount">0</b> working</span>
+      <span><b id="failedCount">0</b> failed</span>
+      <span><b id="untestedCount">41</b> untested</span>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="providers-panel" aria-label="Provider list">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Sources</p>
+          <h1>Providers</h1>
+        </div>
+        <span class="count-pill" id="providerCount">41</span>
+      </div>
+
+      <label class="search-box">
+        <span class="sr-only">Search providers</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+        <input id="providerSearch" type="search" placeholder="Search provider..." autocomplete="off">
+      </label>
+
+      <div class="status-filters" role="group" aria-label="Filter by test status">
+        <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+        <button class="filter-chip" type="button" data-filter="working">Working</button>
+        <button class="filter-chip" type="button" data-filter="failed">Failed</button>
+        <button class="filter-chip" type="button" data-filter="untested">Untested</button>
+      </div>
+
+      <div class="provider-list" id="providerList" role="listbox" aria-label="Choose a provider"></div>
+    </aside>
+
+    <section class="tester-panel">
+      <div class="tester-heading">
+        <div>
+          <p class="eyebrow">Selected provider</p>
+          <h2 id="selectedProvider">BibiShort</h2>
+          <p id="providerNote">Direct MP4 sources may require MP4Box when the file is not fast-start optimized.</p>
+        </div>
+        <span class="status-badge status-untested" id="selectedStatus"><i></i> Untested</span>
+      </div>
+
+      <div class="tester-grid">
+        <div class="player-column">
+          <div class="player-shell" id="playerShell">
+            <video id="video" controls playsinline preload="metadata" crossorigin="anonymous"></video>
+            <div class="player-empty" id="playerEmpty">
+              <span class="empty-play" aria-hidden="true"></span>
+              <strong>No stream loaded</strong>
+              <small>Paste an authorized HLS or MP4 URL below.</small>
+            </div>
+            <div class="player-loading" id="playerLoading" hidden>
+              <span class="spinner" aria-hidden="true"></span>
+              <span>Checking stream…</span>
+            </div>
+          </div>
+
+          <form class="source-form" id="sourceForm">
+            <label for="streamUrl">Stream URL</label>
+            <div class="url-row">
+              <input id="streamUrl" type="url" inputmode="url" placeholder="https://cdn.example.com/video.m3u8" required spellcheck="false">
+              <button class="primary-btn" type="submit">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7V5Z"/></svg>
+                Load &amp; test
+              </button>
+            </div>
+
+            <div class="form-options">
+              <label class="mode-field">
+                <span>Playback mode</span>
+                <select id="playbackMode">
+                  <option value="auto">Auto detect</option>
+                  <option value="hls">HLS / M3U8</option>
+                  <option value="mp4">MP4 / direct video</option>
+                </select>
+              </label>
+              <label class="toggle-field">
+                <input id="autoplayToggle" type="checkbox" checked>
+                <span class="toggle-ui" aria-hidden="true"></span>
+                <span>Autoplay after load</span>
+              </label>
+            </div>
+          </form>
+
+          <div class="quick-actions">
+            <button class="secondary-btn" id="sampleBtn" type="button">Load public HLS sample</button>
+            <button class="ghost-btn" id="clearBtn" type="button">Clear player</button>
+          </div>
+
+          <p class="privacy-note">URLs and results stay in this browser using local storage. No stream is uploaded by this page.</p>
+        </div>
+
+        <aside class="diagnostics" aria-label="Playback diagnostics">
+          <div class="diagnostics-head">
+            <div>
+              <p class="eyebrow">Live report</p>
+              <h3>Diagnostics</h3>
+            </div>
+            <button class="text-btn" id="copyLogBtn" type="button">Copy log</button>
+          </div>
+
+          <dl class="metrics">
+            <div><dt>Format</dt><dd id="formatMetric">—</dd></div>
+            <div><dt>Host</dt><dd id="hostMetric">—</dd></div>
+            <div><dt>Resolution</dt><dd id="resolutionMetric">—</dd></div>
+            <div><dt>Load time</dt><dd id="loadTimeMetric">—</dd></div>
+            <div><dt>Duration</dt><dd id="durationMetric">—</dd></div>
+            <div><dt>Player</dt><dd id="engineMetric">—</dd></div>
+          </dl>
+
+          <div class="test-result" id="testResult">
+            <span class="result-icon" aria-hidden="true">?</span>
+            <div>
+              <strong>Waiting for a stream</strong>
+              <p>Select a provider, paste its authorized URL, then run the test.</p>
+            </div>
+          </div>
+
+          <div class="event-log-wrap">
+            <div class="event-log-head">
+              <strong>Event log</strong>
+              <span id="eventCount">0 events</span>
+            </div>
+            <ol class="event-log" id="eventLog">
+              <li class="log-empty">No playback events yet.</li>
+            </ol>
+          </div>
+
+          <div class="manual-actions">
+            <span>Override result</span>
+            <div>
+              <button type="button" class="mark-btn mark-working" data-manual-status="working">Mark working</button>
+              <button type="button" class="mark-btn mark-failed" data-manual-status="failed">Mark failed</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>For testing streams you own or are authorized to use. DRM-protected and subscription-only sources are not supported.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>
