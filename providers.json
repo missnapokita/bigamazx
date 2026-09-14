@@ -1,0 +1,364 @@
+{
+  "generated_at": "2026-09-14T11:51:36.104Z",
+  "summary": {
+    "total": 44,
+    "active": 36,
+    "maintenance": 7,
+    "coming": 1,
+    "browser_adapters": 34
+  },
+  "platforms": [
+    {
+      "id": "starshort",
+      "name": "StarShort",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/starshort.png",
+      "api": "https://drakula.goodbos.online/starshort-api.html",
+      "has_api": true
+    },
+    {
+      "id": "flextv",
+      "name": "FlexTV",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/flextv.svg",
+      "api": "https://flextv.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "dramabite",
+      "name": "DramaBite",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/dramabite.svg",
+      "api": "https://dramabite.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "freereels",
+      "name": "FreeReels",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/freereels.svg",
+      "api": "https://drakula.goodbos.online/freereels-api.html",
+      "has_api": true
+    },
+    {
+      "id": "fundrama",
+      "name": "FunDrama",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/fundrama.svg",
+      "api": "https://drakula.goodbos.online/fundrama-api.html",
+      "has_api": true
+    },
+    {
+      "id": "microdrama",
+      "name": "MicroDrama",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/microdrama.png",
+      "api": "https://drakula.goodbos.online/microdrama-api.html",
+      "has_api": true
+    },
+    {
+      "id": "vigloo",
+      "name": "Vigloo",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/vigloo.svg",
+      "api": "https://vigloo.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "reelala",
+      "name": "Reelala",
+      "status": "maintenance",
+      "logo": "https://api.dramabuzz.sbs/logos/reelala.png",
+      "api": null,
+      "has_api": false
+    },
+    {
+      "id": "bilitv",
+      "name": "BiliTV",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/bilitv.svg",
+      "api": "https://bilitv.goodbos.online/",
+      "has_api": true
+    },
+    {
+      "id": "dramabox",
+      "name": "DramaBox",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/dramabox.svg",
+      "api": "https://dramabox.goodbos.online",
+      "has_api": true
+    },
+    {
+      "id": "dramawave",
+      "name": "DramaWave",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/dramawave.svg",
+      "api": "https://dramawave.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "netshort",
+      "name": "NetShort",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/netshort.svg",
+      "api": "https://netshort.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "idrama",
+      "name": "iDrama",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/idrama.svg",
+      "api": "https://idrama.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "shortmax",
+      "name": "ShortMax",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/shortmax.svg",
+      "api": "https://shortmax.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "goodshort",
+      "name": "GoodShort",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/goodshort.svg",
+      "api": "https://goodshort.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "melolo",
+      "name": "Melolo",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/melolo.svg",
+      "api": "https://melolo.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "velolo",
+      "name": "Velolo",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/velolo.svg",
+      "api": "https://velolo.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "reelshort",
+      "name": "ReelShort",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/reelshort.svg",
+      "api": "https://reelshort.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "flickreels",
+      "name": "FlickReels",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/flickreels.svg",
+      "api": "https://flickreels.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "stardusttv",
+      "name": "Stardusttv2",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/stardusttv.svg",
+      "api": "https://stardusttv2.goodbos.online/",
+      "has_api": true
+    },
+    {
+      "id": "serialplus",
+      "name": "Serial+",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/serialplus.png",
+      "api": "https://serealplus.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "dotdrama",
+      "name": "DotDrama",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/dotdrama.svg",
+      "api": "https://dotdrama.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "rapidtv",
+      "name": "RapidTV",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/rapidtv.webp",
+      "api": "https://rapidtv.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "shortswave",
+      "name": "ShortsWave",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/shortwave.png",
+      "api": "https://shortwave.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "dramanova",
+      "name": "DramaNova",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/dramanova.webp",
+      "api": "https://dramanova.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "cubetv",
+      "name": "CubeTV",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/cubetv.webp",
+      "api": "https://cubetv.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "reelbuzz",
+      "name": "ReelBuzz",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/reelbuzz.svg",
+      "api": "https://reelbuzz.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "flareflow",
+      "name": "FlareFlow",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/flareflow.svg",
+      "api": "https://plerplow.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "moboreels",
+      "name": "MoboReels",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/moboreels.svg",
+      "api": "https://moboreels.goodbos.online",
+      "has_api": true
+    },
+    {
+      "id": "happyshort",
+      "name": "HappyShort",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/happyshort.png",
+      "api": "https://happyshort.goodbos.online/api",
+      "has_api": true
+    },
+    {
+      "id": "reelife",
+      "name": "Reelife",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/reelife.svg",
+      "api": "https://reelife.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "pinedrama",
+      "name": "PineDrama",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/pinedrama.jpeg",
+      "api": "https://pinedrama.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "anyreel",
+      "name": "Anyreel",
+      "status": "maintenance",
+      "logo": "https://api.dramabuzz.sbs/logos/anyreel.jpeg",
+      "api": null,
+      "has_api": false
+    },
+    {
+      "id": "raptdrama",
+      "name": "RaptDrama",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/raptdrama.jpeg",
+      "api": "https://raptdrama.goodbos.online/",
+      "has_api": true
+    },
+    {
+      "id": "bonustv",
+      "name": "Bonustv",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/bonustv.jpeg",
+      "api": "https://bonustv.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "minitv",
+      "name": "MiniTv",
+      "status": "maintenance",
+      "logo": "https://api.dramabuzz.sbs/logos/minitv.jpeg",
+      "api": null,
+      "has_api": false
+    },
+    {
+      "id": "golddrama",
+      "name": "Gold Drama",
+      "status": "maintenance",
+      "logo": "https://api.dramabuzz.sbs/logos/golddrama.jpeg",
+      "api": null,
+      "has_api": false
+    },
+    {
+      "id": "iqiyi",
+      "name": "IQIYI",
+      "status": "coming",
+      "logo": "https://api.dramabuzz.sbs/logos/logo-1781010749215.jpeg",
+      "api": null,
+      "has_api": false
+    },
+    {
+      "id": "bstation",
+      "name": "Bstation",
+      "status": "maintenance",
+      "logo": "https://api.dramabuzz.sbs/logos/bstation.jpeg",
+      "api": null,
+      "has_api": false
+    },
+    {
+      "id": "joyreels",
+      "name": "Joyreels",
+      "status": "maintenance",
+      "logo": "https://api.dramabuzz.sbs/logos/joyreels.jpeg",
+      "api": null,
+      "has_api": false
+    },
+    {
+      "id": "kalostv",
+      "name": "KalosTV",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/kalostv.jpeg",
+      "api": "https://kalostv.goodbos.online/api.html",
+      "has_api": true
+    },
+    {
+      "id": "vibeshort",
+      "name": "Vibeshort",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/vibeshort.jpeg",
+      "api": "https://vibeshort.goodbos.online/",
+      "has_api": true
+    },
+    {
+      "id": "topdrama",
+      "name": "TopDrama",
+      "status": "maintenance",
+      "logo": "https://api.dramabuzz.sbs/logos/topdrama.jpeg",
+      "api": null,
+      "has_api": false
+    },
+    {
+      "id": "storyreel",
+      "name": "Storyreel",
+      "status": "active",
+      "logo": "https://api.dramabuzz.sbs/logos/storyreel.png",
+      "api": "https://storyreel.goodbos.online/",
+      "has_api": true
+    }
+  ]
+}
